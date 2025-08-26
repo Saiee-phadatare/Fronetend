@@ -65,7 +65,7 @@ function AdminDashboard() {
               </td>
 
               <td>
-                <a href={`http://localhost:5000/${urlObj.shortID}`}  target="_blank" rel="noreferrer" className="short-url">{urlObj.shortURL}</a>
+                <a href={`https://shorturl-bcq4.onrender.com/${urlObj.shortID}`}  target="_blank" rel="noreferrer" className="short-url">{urlObj.shortURL}</a>
               </td>
 
               <td>{urlObj.clicks ?? 0}</td>
@@ -89,5 +89,6 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+
 
 
