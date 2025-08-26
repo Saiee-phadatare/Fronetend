@@ -11,7 +11,7 @@ function AdminLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/admin/signin", { email, password });
+      const res = await axios.post("${process.env.REACT_APP_API_URL}/admin/signin", { email, password });
       localStorage.setItem("adminToken", res.data.token); 
       navigate("/admin-dashboard");
     } catch (err) {
@@ -36,4 +36,5 @@ function AdminLogin() {
 }
 
 export default AdminLogin;
+
 
