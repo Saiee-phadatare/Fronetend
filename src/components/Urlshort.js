@@ -16,7 +16,7 @@ function Urlshort() {
       const res = await axios.post("${process.env.REACT_APP_API_URL}/api/shorten", { url });
       setShortUrl(res.data.shortURL);
     } catch (err) {
-      setError(err.response?.data?.error || "PLEASE ENTER URL");
+      setError(err.response?.data?.error || "Something went wrong");
     }
   };
 
@@ -49,4 +49,5 @@ function Urlshort() {
 }
 
 export default Urlshort;
+
 
