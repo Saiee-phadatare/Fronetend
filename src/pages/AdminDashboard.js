@@ -18,7 +18,7 @@ function AdminDashboard() {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:5000/admin/adminpage?page=${page}&limit=8`,
+        `${process.env.REACT_APP_API_URL}/admin/adminpage?page=${page}&limit=8`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
@@ -89,3 +89,4 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+
